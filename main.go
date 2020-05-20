@@ -238,7 +238,7 @@ func unsignBuildArtifact(aapt, pth string) error {
 }
 
 func zipalignBuildArtifact(zipalign, pth, dstPth string) error {
-	cmdSlice := []string{zipalign, "-f -p", "4", pth, dstPth}
+	cmdSlice := []string{zipalign, "-f", "-p", "4", pth, dstPth}
 
 	prinatableCmd := command.PrintableCommandArgs(false, cmdSlice)
 	log.Printf("=> %s", prinatableCmd)
